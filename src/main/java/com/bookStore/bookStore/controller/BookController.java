@@ -19,7 +19,9 @@ public class BookController {
 
     @Autowired
     private BookService service;
-    private MyBookListService myBooklist;
+
+    @Autowired
+    private MyBookListService myBookService;
 
 
     @GetMapping("/")
@@ -49,7 +51,7 @@ public class BookController {
 
     @GetMapping("/my_books")
     public String getMyBooks(Model model) {
-        List<MyBookList> list = myBooklist.getAllMyBooks();
+        List<MyBookList> list = myBookService.getAllMyBooks();
         model.addAttribute("book", list);
         return "myBooks";
     }
