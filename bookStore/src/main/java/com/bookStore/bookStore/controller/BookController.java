@@ -30,20 +30,20 @@ public class BookController {
         return "bookRegister";
     }
 
-//    @GetMapping("/available_books")
-//    public ModelAndView getAllBook() {
-////        List<Book>list=service.getAllBook();
-////		ModelAndView m=new ModelAndView();
-////		m.setViewName("bookList");
-////		m.addObject("book",list);
-//        return new ModelAndView("bookList","book",list); //erro
-//    }
+    @GetMapping("/available_books")
+    public ModelAndView getAllBook() {
+        List<Book>list=service.getAllBook();
+//		ModelAndView m=new ModelAndView();
+//		m.setViewName("bookList");
+//		m.addObject("book",list);
+        return new ModelAndView("bookList","book",list);
+    }
+
     @PostMapping("/save")
     public String addBook(@ModelAttribute Book b) {
         service.save(b);
         return "redirect:/available_books";
     }
-
 //    @GetMapping("/my_books")
 //    public String getMyBooks(Model model)
 //    {
