@@ -3,6 +3,7 @@ package com.bookStore.bookStore.controller;
 import com.bookStore.bookStore.entity.Book;
 import com.bookStore.bookStore.entity.MyBookList;
 import com.bookStore.bookStore.service.BookService;
+import com.bookStore.bookStore.service.MyBookListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +19,7 @@ public class BookController {
 
     @Autowired
     private BookService service;
+    private MyBookListService myBooklist;
 
 
     @GetMapping("/")
@@ -44,13 +46,13 @@ public class BookController {
         service.save(b);
         return "redirect:/available_books";
     }
-//    @GetMapping("/my_books")
-//    public String getMyBooks(Model model)
-//    {
-//        List<MyBookList>list=myBookService.getAllMyBooks();
-//        model.addAttribute("book",list);
-//        return "myBooks";
-//    }
+   @GetMapping("/my_books")
+   public String getMyBooks(Model model)
+  {
+       List<MyBookList>list=myBooklist.getAllMyBooks();
+       model.addAttribute("book",list);
+       return "myBooks";
+   }
 
 }
 

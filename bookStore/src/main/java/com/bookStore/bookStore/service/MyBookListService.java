@@ -1,4 +1,4 @@
-package com.bookStore.service;
+package com.bookStore.bookStore.service;
 
 import java.util.List;
 
