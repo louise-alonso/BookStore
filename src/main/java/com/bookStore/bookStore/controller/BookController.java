@@ -34,11 +34,11 @@ public class BookController {
 
     @GetMapping("/available_books")
     public ModelAndView getAllBook() {
-        List<Book>list=service.getAllBook();
+        List<Book> list = service.getAllBook();
 //		ModelAndView m=new ModelAndView();
 //		m.setViewName("bookList");
 //		m.addObject("book",list);
-        return new ModelAndView("bookList","book",list);
+        return new ModelAndView("bookList", "book", list);
     }
 
     @PostMapping("/save")
@@ -46,13 +46,13 @@ public class BookController {
         service.save(b);
         return "redirect:/available_books";
     }
-   @GetMapping("/my_books")
-   public String getMyBooks(Model model)
-  {
-       List<MyBookList>list=myBooklist.getAllMyBooks();
-       model.addAttribute("book",list);
-       return "myBooks";
-   }
+
+    @GetMapping("/my_books")
+    public String getMyBooks(Model model) {
+        List<MyBookList> list = myBooklist.getAllMyBooks();
+        model.addAttribute("book", list);
+        return "myBooks";
+    }
 
 }
 

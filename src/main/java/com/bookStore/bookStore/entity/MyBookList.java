@@ -24,10 +24,6 @@ public class MyBookList {
         this.price = price;
     }
 
-    public MyBookList() {
-
-    }
-
     // Getters and setters
 
     public int getId() {
