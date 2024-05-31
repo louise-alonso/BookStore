@@ -1,16 +1,16 @@
 # Book Store Management
 
-Um projeto simples de gerenciamento de livraria desenvolvido com Spring Boot, MySQL, Thymeleaf e JPA.
+Um projeto simples de gerenciamento de livraria desenvolvido com Spring Boot, MySQL e JPA.
 
 ## Tecnologias Utilizadas
 
 - **Spring Boot**: Framework Java para construir aplicações web e microserviços.
 - **MySQL**: Sistema de gerenciamento de banco de dados relacional.
-- **Thymeleaf**: Motor de templates para renderização de páginas web em Java.
 - **JPA (Java Persistence API)**: API para gerenciamento de persistência e mapeamento objeto-relacional.
 
 ## Colaboradores
 
+- **Louise Alonso** (@louise-alonso) - Collaborator
 - **Calvin Ribeiro** - (@calvinribeiro) - Collaborator
 - **Maria Fernanda** (@Mf3ernanda) - Collaborator
 - **Tárcyla Kauane** (@tarcylakauane) - Collaborator
