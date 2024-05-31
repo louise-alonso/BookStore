@@ -54,6 +54,7 @@ public class BookController {
         List<MyBookList> list = myBookService.getAllMyBooks();
         model.addAttribute("book", list);
         return "myBooks";
+
     }
 
 }
