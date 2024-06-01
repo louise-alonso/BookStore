@@ -5,8 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-import java.math.BigDecimal;
-
 @Entity
 @Table(name="MyBooks")
 public class MyBookList {
@@ -15,13 +13,17 @@ public class MyBookList {
     private int id;
     private String name;
     private String author;
-    private BigDecimal price;
+    private String price;
 
-    public MyBookList(int id, String name, String author, BigDecimal price) {
+    public MyBookList(int id, String name, String author, String price) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.price = price;
+    }
+
+    public MyBookList() {
+
     }
 
     // Getters and setters
@@ -50,11 +52,11 @@ public class MyBookList {
         this.author = author;
     }
 
-    public BigDecimal getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }
