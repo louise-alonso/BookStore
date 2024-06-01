@@ -6,8 +6,8 @@ Um projeto simples de gerenciamento de livraria desenvolvido com Spring Boot, My
 
 - **Spring Boot**: Framework Java para construir aplicações web e microserviços.
 - **MySQL**: Sistema de gerenciamento de banco de dados relacional.
+- **Thymeleaf**: Motor de templates para renderização de páginas web em Java.
 - **JPA (Java Persistence API)**: API para gerenciamento de persistência e mapeamento objeto-relacional.
-- **Thymeleaf**: Utilizado para gerar visualizações HTML
   
 
 ## Colaboradores
