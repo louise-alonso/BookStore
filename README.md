@@ -24,4 +24,12 @@ Um projeto simples de gerenciamento de livraria desenvolvido com Spring Boot, My
 - Atualização de informações de livros
 - Remoção de livros
 
+## Como rodar o projeto
 
+1-Clone o repositório do projeto Book Store do GitHub para o seu ambiente local
+
+2-Crie uma conexão no Banco de Dados MySQL, com o nome book, usuário root, e senha root, e clique em OK.
+![image](https://github.com/louise-alonso/BookStore/assets/120966351/8496c501-b587-4572-aa52-fc81fe33dc46)
+
+3-Entre no diretório do projeto e execute a aplicação:
+![image](https://github.com/louise-alonso/BookStore/assets/120966351/91f27b09-27c2-445c-8f9b-ea2c92914291)
