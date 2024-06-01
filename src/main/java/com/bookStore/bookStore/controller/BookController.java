@@ -36,9 +36,16 @@ public class BookController {
     @GetMapping("/available_books")
     public ModelAndView getAllBook() {
         List<Book> list = service.getAllBook();
-//		ModelAndView m=new ModelAndView();
-//		m.setViewName("bookList");
-//		m.addObject("book",list);
+
+
+        return new ModelAndView("bookList", "book", list);
+    }
+
+    @GetMapping("/avaliable_books_in_order")
+    public ModelAndView getAllBookInAlphabeticOrder(){
+        List<Book> list = service.getAllBookByName();
+
+
         return new ModelAndView("bookList", "book", list);
     }
 

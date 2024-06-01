@@ -5,6 +5,8 @@ import com.bookStore.bookStore.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -19,6 +21,10 @@ public class BookService {
 
     public List<Book> getAllBook(){
         return bRepo.findAll();
+    }
+
+    public List<Book> getAllBookByName(){
+        return bRepo.findAllByOrderByNameAsc();
     }
 
     public Book getBookById(int id) {

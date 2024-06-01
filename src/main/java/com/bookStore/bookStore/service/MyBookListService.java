@@ -1,6 +1,8 @@
 package com.bookStore.bookStore.service;
 
 import java.util.List;
+
+import com.bookStore.bookStore.entity.Book;
 import com.bookStore.bookStore.entity.MyBookList;
 import com.bookStore.bookStore.repository.MyBookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,10 @@ public class MyBookListService {
 
     public void saveMyBooks(MyBookList book) {
         myBookRepository.save(book);
+    }
+
+    public List<MyBookList> getAllBookByName(){
+        return myBookRepository.findAllByOrderByNameAsc();
     }
 
     public List<MyBookList> getAllMyBooks() {
