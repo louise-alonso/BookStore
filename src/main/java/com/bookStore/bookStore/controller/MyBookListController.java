@@ -3,6 +3,7 @@ package com.bookStore.bookStore.controller;
 import com.bookStore.bookStore.entity.Book;
 import com.bookStore.bookStore.entity.MyBookList;
 import com.bookStore.bookStore.service.MyBookListService;
+import com.bookStore.bookStore.servicefachada.MyBookListServiceFachada;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ import java.util.List;
 public class MyBookListController {
 
     @Autowired
-    private MyBookListService service;
+    private MyBookListServiceFachada service;
 
     @RequestMapping(value = "/deleteMyList/{id}", method = RequestMethod.GET)
     public String deleteMyList(@PathVariable("id") int id) {

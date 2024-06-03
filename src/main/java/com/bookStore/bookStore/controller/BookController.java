@@ -2,9 +2,10 @@ package com.bookStore.bookStore.controller;
 
 import com.bookStore.bookStore.entity.Book;
 import com.bookStore.bookStore.entity.MyBookList;
-import com.bookStore.bookStore.service.BookService;
+import com.bookStore.bookStore.servicefachada.BookServiceFachada;
 import com.bookStore.bookStore.service.MyBookListService;
 
+import com.bookStore.bookStore.servicefachada.BookServiceFachada;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +18,7 @@ import java.util.*;
 public class BookController {
 
     @Autowired
-    private BookService service;
+    private BookServiceFachada service;
 
     @Autowired
     private MyBookListService myBookService;
@@ -36,16 +37,12 @@ public class BookController {
     @GetMapping("/available_books")
     public ModelAndView getAllBook() {
         List<Book> list = service.getAllBook();
-
-
         return new ModelAndView("bookList", "book", list);
     }
 
     @GetMapping("/avaliable_books_in_order")
     public ModelAndView getAllBookInAlphabeticOrder(){
         List<Book> list = service.getAllBookByName();
-
-
         return new ModelAndView("bookList", "book", list);
     }
 
