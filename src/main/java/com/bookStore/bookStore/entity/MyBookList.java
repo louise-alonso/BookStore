@@ -11,24 +11,30 @@ import jakarta.persistence.Table;
 public class MyBookList {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-incremented primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String author;
     private String price;
+    private String genre;
+    private String year;
+    private String pages;
 
-    public MyBookList(int id, String name, String author, String price) {
+    public MyBookList(int id, String name, String author, String price, String genre, String year, String pages) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.price = price;
+        this.genre = genre;
+        this.year = year;
+        this.pages = pages;
     }
 
     public MyBookList() {
 
     }
 
-    // Getters and setters
+    // Getters e Setters
 
     public int getId() {
         return id;
@@ -60,5 +66,29 @@ public class MyBookList {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getPages() {
+        return pages;
+    }
+
+    public void setPages(String pages) {
+        this.pages = pages;
     }
 }

@@ -41,6 +41,9 @@
             <th scope="col">Id</th>
             <th scope="col">Nome | <a th:href="@{/avaliable_books_in_order}">Ordenar por</a></th>
             <th scope="col">Autor</th>
+            <th scope="col">Gênero</th>
+            <th scope="col">Ano</th>
+            <th scope="col">Páginas</th>
             <th scope="col">Preço</th>
             <th scope="col">Ações</th>
         </tr>
@@ -50,6 +53,9 @@
             <td th:text="${b.id}"></td>
             <td th:text="${b.name}"></td>
             <td th:text="${b.author}"></td>
+            <td th:text="${b.genre}"></td>
+            <td th:text="${b.year}"></td>
+            <td th:text="${b.pages}"></td>
             <td th:text="${b.price}"></td>
             <td>
                 <a class="btn btn-secondary btn-sm" th:href="@{/mylist/{id}(id=${b.id})}">Adicionar aos Meus Livros</a>
