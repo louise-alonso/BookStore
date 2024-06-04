@@ -20,7 +20,7 @@ public class MyBookListController {
     @Autowired
     private MyBookListServiceFachada service;
 
-    @RequestMapping(value = "/deleteMyList/{id}", method = RequestMethod.GET)
+    @GetMapping("/deleteMyList/{id}")
     public String deleteMyList(@PathVariable("id") int id) {
         service.deleteById(id);
         return "redirect:/my_books";
